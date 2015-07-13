@@ -1,4 +1,4 @@
-package singleton.staticallyinitialized;
+package singleton.eagerlylyinitialized;
 
 /**
  * Created by ralph on 7/13/15 3:34 PM.

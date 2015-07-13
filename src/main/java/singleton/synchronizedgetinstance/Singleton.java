@@ -1,4 +1,4 @@
-package singleton.simplelazyinitialization;
+package singleton.synchronizedgetinstance;
 
 /**
  * Created by ralph on 7/13/15 3:46 PM.
