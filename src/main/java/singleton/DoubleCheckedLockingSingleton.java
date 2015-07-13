@@ -1,21 +1,21 @@
-package singleton.doublecheckedlocking;
+package singleton;
 
 /**
  * Created by ralph on 7/13/15 3:50 PM.
  */
-public class Singleton {
+public class DoubleCheckedLockingSingleton {
     // must be volatile otherwise not completely initialized instance may be returned
     // http://www.infoq.com/cn/articles/double-checked-locking-with-delay-initialization
-    private volatile static Singleton instance;
+    private volatile static DoubleCheckedLockingSingleton instance;
 
-    private Singleton() {
+    private DoubleCheckedLockingSingleton() {
     }
 
-    public static Singleton getInstance() {
+    public static DoubleCheckedLockingSingleton getInstance() {
         if (instance == null) {
-            synchronized (Singleton.class) {
+            synchronized (DoubleCheckedLockingSingleton.class) {
                 if (instance == null) {
-                    instance = new Singleton();
+                    instance = new DoubleCheckedLockingSingleton();
                 }
             }
         }
